@@ -43,3 +43,37 @@ climate_change_analysis/
 │   ├── README.md
 │
 └── .gitignore
+Requirements
+To run the R script (climate_analysis.R), ensure you have the following packages installed:
+install.packages(c("readr", "dplyr", "tidyr", "ggplot2"))
+ Overview of Analysis
+1. Data Loading
+Loaded the dataset using read_csv() from the readr package.
+Inspected basic structure using dim(), head(), tail(), summary(), and str().
+2. Data Inspection
+Identified missing values using is.na() and colSums().
+Checked for duplicate rows using duplicated() and sum().
+3. Data Cleaning
+Imputed missing numeric values using column means.
+Removed duplicate rows with unique().
+Reshaped data from wide to long format for time series visualization.
+4. Data Visualization
+Using ggplot2, created:
+
+Histograms of temperature anomalies (e.g., year 1961)
+Boxplots grouped by decade
+Scatter plots comparing early vs. recent years
+Bar charts showing country representation
+Correlation heatmap of yearly temperature changes
+🧠 Key Insights
+Global Warming Trend : Median temperature anomalies increased steadily from the 1960s onward.
+Positive Correlations : Earlier and later years show strong positive relationships, indicating persistent warming patterns.
+Missing Data : Some earlier years and small countries had many missing values, requiring imputation or exclusion.
+Outliers : Extreme values were observed, particularly in recent decades, suggesting possible climatic extremes or measurement inconsistencies.
+🚀 Future Work
+Potential machine learning and statistical tasks:
+
+Forecasting future temperature anomalies using ARIMA or LSTM networks
+Clustering countries based on similar temperature trends
+Detecting anomalies or extreme weather events
+Investigating factors influencing regional warming (economic, geographic, etc.)
